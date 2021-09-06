@@ -119,6 +119,3 @@ function celsiusToFahrenheit(cDegrees) {
 
 var a = celsiusToFahrenheit(25);
 console.log(a);
-
-
-

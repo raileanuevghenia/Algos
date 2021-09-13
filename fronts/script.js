@@ -1,5 +1,11 @@
-// Write a method that accepts a value and create a new node, assign it to the list head,
-//  and return a pointer to the new head node.
+
+class Node {
+    constructor(value) {
+        this.value = value
+        this.next = null
+    }
+}
+
 
 class SLL {
     constructor() {
@@ -56,4 +62,31 @@ class SLL {
         return 0;
 
     }
+    addBack(value) {
+        var runner = this.head;
+        while (runner.next) {
+            runner = runner.next
+        }
+        runner.next = new Node(value);
+        return this
+    }
+
+    contains(value) {
+        var current = this.head
+        var count = 0
+
+        while (current) {
+            if (count == value) {
+                return true
+            }
+            count += 1
+            current = current.next
+
+        }
+        return this
+
+    }
 }
+
+var a = new SLL()
+a.addFront(7)
